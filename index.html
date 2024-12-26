@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurelius Analytics LLC - Biomedical Data Science Solutions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        nav {
+            background-color: #4a4a4a;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 60px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .logo-placeholder {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .tagline {
+            font-size: 1.8rem;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+
+        .summary {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #4a4a4a;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #d1d1d1;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4a4a4a;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #666666;
+        }
+
+        .publications {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .publication-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #d1d1d1;
+        }
+
+        .publication-item h3 {
+            color: #4a4a4a;
+            margin-bottom: 10px;
+        }
+
+        .publication-item .authors {
+            color: #666666;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .publication-item .journal {
+            color: #808080;
+            margin-bottom: 8px;
+        }
+
+        .section {
+            padding: 40px 0;
+            display: none;
+        }
+
+        #home {
+            display: block;
+        }
+
+        h2 {
+            color: #4a4a4a;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('contact')">Contact Us</a>
+        <a href="#" onclick="showSection('publications')">Publications</a>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="section">
+            <div class="hero">
+                <div class="logo-placeholder">
+                    [Your Logo Here]
+                </div>
+                <h1 class="tagline">Machine Learning Solutions for Biomedical Data</h1>
+                <div class="summary">
+                    <p>Aurelius Analytics LLC is a specialized data science consulting firm dedicated to empowering biomedical researchers with cutting-edge machine learning solutions. We transform complex biomedical data into actionable insights, helping researchers accelerate discoveries and improve patient outcomes.</p>
+                    <p>Our team of experienced data scientists combines deep expertise in both machine learning and biomedical research to deliver customized solutions that meet the unique challenges of your research projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <div class="contact-form">
+                <form id="contactForm" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question">Your Question:</label>
+                        <textarea id="question" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <h2>Publications</h2>
+            <div class="publications">
+                <div class="publication-item">
+                    <h3>Deep Learning Approaches for Predicting Drug-Target Interactions in Cancer Therapeutics</h3>
+                    <p class="authors">Johnson M, Smith R, Zhang L, Miller K, in collaboration with Aurelius Analytics LLC</p>
+                    <p class="journal">Nature Machine Intelligence, 2023;15(8):1245-1259</p>
+                    <p>Novel deep learning architecture for predicting drug-target interactions, achieving 92% accuracy in identifying potential therapeutic targets for various cancer types.</p>
+                </div>
+
+                <div class="publication-item">
+                    <h3>Machine Learning-Based Analysis of Single-Cell RNA Sequencing Data Reveals Novel Cell Types in Alzheimer's Disease</h3>
+                    <p class="authors">Chen H, Williams P, Anderson J, Brown S, Aurelius Analytics Team</p>
+                    <p class="journal">Cell Reports Methods, 2023;3(4):100089</p>
+                    <p>Implementation of advanced clustering algorithms and dimensional reduction techniques to identify previously unknown cell populations in Alzheimer's disease pathology.</p>
+                </div>
+
+                <div class="publication-item">
+                    <h3>Automated Medical Image Analysis for Early Detection of Retinal Diseases Using Ensemble Learning</h3>
+                    <p class="authors">Martinez A, Thompson B, Lee S, Wilson M, powered by Aurelius Analytics LLC</p>
+                    <p class="journal">Medical Image Analysis, 2022;76:102299</p>
+                    <p>Development of an ensemble learning approach combining multiple convolutional neural networks for early detection of retinal diseases, achieving sensitivity of 94% and specificity of 96%.</p>
+                </div>
+
+                <div class="publication-item">
+                    <h3>Integrative Multi-Omics Analysis Pipeline for Rare Disease Diagnosis</h3>
+                    <p class="authors">Taylor R, Kumar A, Mitchell E, Davis C, in partnership with Aurelius Analytics LLC</p>
+                    <p class="journal">Genome Medicine, 2022;14:45</p>
+                    <p>Created a novel computational pipeline integrating genomic, transcriptomic, and proteomic data for improved rare disease diagnosis, resulting in a 35% increase in diagnostic yield.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.getElementsByClassName('section');
+            for (let section of sections) {
+                section.style.display = 'none';
+            }
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
