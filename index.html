@@ -45,26 +45,28 @@
 
         .header {
             display: flex;
-            align-items: flex-start;
-            gap: 40px;
+            flex-direction: column;
+            align-items: center;
             margin-bottom: 60px;
         }
 
         .logo-container {
-            flex-shrink: 0;
-            width: 180px;
-            height: 180px;
-            background-color: #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
+            width: auto;
+            height: auto;
+            background-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .centered-logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
         }
 
         .header-content {
-            padding-top: 5px;
-            flex-grow: 1;
-            max-width: 600px;
+            text-align: center;
+            max-width: 100%;
         }
 
         .company-name {
@@ -79,9 +81,11 @@
             margin: 0 0 25px 0;
         }
 
-        .content {
+        .main-content {
             max-width: 800px;
             margin: 0 auto;
+            padding: 20px;
+            text-align: justify;
         }
 
         .contact-section {
@@ -178,14 +182,17 @@
         <section id="home" class="section">
             <div class="header">
                 <div class="logo-container">
-                    <img src="aurelius.png" alt="Aurelius Analytics Logo">
+                    <img src="aurelius.png" alt="Aurelius Analytics Logo" class="centered-logo">
                 </div>
                 <div class="header-content">
                     <h1 class="company-name">Aurelius Analytics LLC</h1>
                     <p class="tagline">Machine Learning Solutions for Biomedical Data</p>
-                    <p>Aurelius Analytics LLC is a biomedical data science consulting firm dedicated to developing custom machine learning solutions for researchers. With our experience in both machine learning and biomedical research, we develop specialized models to process researchers' complex biomedical data, helping to accelerate discoveries. To see our full list of publications, please <a href="#" onclick="showSection('publications')" class="pub-link">click here</a>.</p>
                 </div>
-            
+            </div>
+            <div class="main-content">
+                <p>Aurelius Analytics LLC is a biomedical data science consulting firm dedicated to developing custom machine learning solutions for researchers. With our experience in both machine learning and biomedical research, we develop specialized models to process researchers' complex biomedical data, helping to accelerate discoveries.</p>
+                <p>To see our full list of publications, please <a href="#" onclick="showSection('publications')" class="pub-link">click here</a>.</p>
+            </div>
         </section>
 
         <section id="contact" class="section">
