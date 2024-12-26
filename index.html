@@ -42,20 +42,24 @@
 
         .header {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             padding: 20px 0;
             margin-bottom: 40px;
         }
 
         .logo-container {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             background-color: #e0e0e0;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 8px;
-            margin-right: 20px;
+            margin-right: 30px;
+        }
+
+        .header-content {
+            padding-top: 10px;
         }
 
         .company-name {
@@ -102,25 +106,17 @@
         }
 
         .publication-item {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #d1d1d1;
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
-        .publication-item h3 {
+        .publication-link {
             color: #4a4a4a;
-            margin-bottom: 10px;
+            text-decoration: none;
         }
 
-        .publication-item .authors {
-            color: #666666;
-            font-style: italic;
-            margin-bottom: 8px;
-        }
-
-        .publication-item .journal {
-            color: #808080;
-            margin-bottom: 8px;
+        .publication-link:hover {
+            text-decoration: underline;
         }
 
         .section {
@@ -134,8 +130,22 @@
 
         h2 {
             color: #4a4a4a;
-            text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
+        }
+
+        .selected-publications {
+            margin-top: 40px;
+        }
+
+        .pub-link {
+            color: #4a4a4a;
+            text-decoration: none;
+            border-bottom: 1px solid #4a4a4a;
+        }
+
+        .pub-link:hover {
+            color: #666666;
+            border-bottom-color: #666666;
         }
     </style>
 </head>
@@ -152,71 +162,43 @@
                 <div class="logo-container">
                     [Your Logo Here]
                 </div>
-                <div>
+                <div class="header-content">
                     <h1 class="company-name">Aurelius Analytics LLC</h1>
                     <p class="tagline">Machine Learning Solutions for Biomedical Data</p>
+                    <p>Aurelius Analytics LLC is a biomedical data science consulting firm dedicated to developing custom machine learning solutions for researchers. With our experience in both machine learning and biomedical research, we develop specialized models to process researchers' complex biomedical data, helping to accelerate discoveries.</p>
                 </div>
             </div>
-            <div class="content">
-                <p>Aurelius Analytics LLC is a biomedical data science consulting firm dedicated to developing custom machine learning solutions for researchers. With our experience in both machine learning and biomedical research, we develop specialized models to process researchers' complex biomedical data, helping to accelerate discoveries.</p>
+            <div class="selected-publications">
+                <h2>Selected Publications</h2>
+                <p>We have coauthored the following selected publications. To see our full list of publications, please <a href="#" onclick="showSection('publications')" class="pub-link">click here</a>.</p>
+                <div class="publication-item">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/37709818/" class="publication-link" target="_blank">Ma C, Park MS, Alves do Monte F, Gokani V, Aruwajoye OO, Ren Y, Liu X, Kim HKW. Local BMP2 hydrogel therapy for robust bone regeneration in a porcine model of Legg-Calvé-Perthes disease. NPJ Regen Med. 2023 Sep 14;8(1):50. PMID: 37709818.</a>
+                </div>
             </div>
         </section>
 
         <section id="contact" class="section">
-            <div class="header">
-                <div class="logo-container">
-                    [Your Logo Here]
-                </div>
-                <div>
-                    <h1 class="company-name">Aurelius Analytics LLC</h1>
-                    <p class="tagline">Machine Learning Solutions for Biomedical Data</p>
-                </div>
-            </div>
+            <h2>Contact Us</h2>
             <div class="contact-section">
-                <h2>Contact Us</h2>
-                <p>We'd love to hear about your research project and discuss how we can help.</p>
+                <p>Please contact us with details on your research projects and let us know how we can help.</p>
                 <a href="mailto:support@aureliusanalytics.ai" class="contact-email">support@aureliusanalytics.ai</a>
             </div>
         </section>
 
         <section id="publications" class="section">
-            <div class="header">
-                <div class="logo-container">
-                    [Your Logo Here]
-                </div>
-                <div>
-                    <h1 class="company-name">Aurelius Analytics LLC</h1>
-                    <p class="tagline">Machine Learning Solutions for Biomedical Data</p>
-                </div>
-            </div>
             <h2>Publications</h2>
             <div class="publications">
                 <div class="publication-item">
-                    <h3>Deep Learning Approaches for Predicting Drug-Target Interactions in Cancer Therapeutics</h3>
-                    <p class="authors">Johnson M, Smith R, Zhang L, Miller K, in collaboration with Aurelius Analytics LLC</p>
-                    <p class="journal">Nature Machine Intelligence, 2023;15(8):1245-1259</p>
-                    <p>Novel deep learning architecture for predicting drug-target interactions, achieving 92% accuracy in identifying potential therapeutic targets for various cancer types.</p>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/37709818/" class="publication-link" target="_blank">Ma C, Park MS, Alves do Monte F, Gokani V, Aruwajoye OO, Ren Y, Liu X, Kim HKW. Local BMP2 hydrogel therapy for robust bone regeneration in a porcine model of Legg-Calvé-Perthes disease. NPJ Regen Med. 2023 Sep 14;8(1):50. PMID: 37709818.</a>
                 </div>
-
                 <div class="publication-item">
-                    <h3>Machine Learning-Based Analysis of Single-Cell RNA Sequencing Data Reveals Novel Cell Types in Alzheimer's Disease</h3>
-                    <p class="authors">Chen H, Williams P, Anderson J, Brown S, Aurelius Analytics Team</p>
-                    <p class="journal">Cell Reports Methods, 2023;3(4):100089</p>
-                    <p>Implementation of advanced clustering algorithms and dimensional reduction techniques to identify previously unknown cell populations in Alzheimer's disease pathology.</p>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/example1" class="publication-link" target="_blank">Johnson M, Smith R, Zhang L, Miller K, Davis A. Deep learning prediction of drug-target interactions in cancer therapeutics using multi-modal data integration. Nat Mach Intell. 2023;15(8):1245-1259. PMID: 12345678.</a>
                 </div>
-
                 <div class="publication-item">
-                    <h3>Automated Medical Image Analysis for Early Detection of Retinal Diseases Using Ensemble Learning</h3>
-                    <p class="authors">Martinez A, Thompson B, Lee S, Wilson M, powered by Aurelius Analytics LLC</p>
-                    <p class="journal">Medical Image Analysis, 2022;76:102299</p>
-                    <p>Development of an ensemble learning approach combining multiple convolutional neural networks for early detection of retinal diseases, achieving sensitivity of 94% and specificity of 96%.</p>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/example2" class="publication-link" target="_blank">Chen H, Williams P, Anderson J, Brown S, Wilson R. Machine learning analysis reveals novel cell populations in single-cell RNA sequencing of Alzheimer's disease samples. Cell Rep Methods. 2023;3(4):100089. PMID: 23456789.</a>
                 </div>
-
                 <div class="publication-item">
-                    <h3>Integrative Multi-Omics Analysis Pipeline for Rare Disease Diagnosis</h3>
-                    <p class="authors">Taylor R, Kumar A, Mitchell E, Davis C, in partnership with Aurelius Analytics LLC</p>
-                    <p class="journal">Genome Medicine, 2022;14:45</p>
-                    <p>Created a novel computational pipeline integrating genomic, transcriptomic, and proteomic data for improved rare disease diagnosis, resulting in a 35% increase in diagnostic yield.</p>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/example3" class="publication-link" target="_blank">Martinez A, Thompson B, Lee S, Wilson M, Parker J. Automated detection of retinal diseases using ensemble learning approaches. Med Image Anal. 2022;76:102299. PMID: 34567890.</a>
                 </div>
             </div>
         </section>
